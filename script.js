@@ -451,6 +451,11 @@ window.addEventListener("load", () => {
 const contactLeaderBtn = document.getElementById("contactLeaderBtn");
 const leaderModal = document.getElementById("leaderModal");
 const closeModal = document.querySelector(".close-modal");
+document.querySelector('a[href="#contactLeader"]').addEventListener("click", (e) => {
+    e.preventDefault();
+    leaderModal.style.display = "flex";
+    menu.classList.remove("show");
+});
 
 contactLeaderBtn.addEventListener("click", () => {
     leaderModal.style.display = "flex";
