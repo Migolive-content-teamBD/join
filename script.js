@@ -373,4 +373,95 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
+
+  /* ==========================
+   SCROLL REVEAL
+========================== */
+
+const revealItems = document.querySelectorAll(
+"section,.card,.help-right,.download-box"
+);
+
+const revealObserver = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show-item");
+
+        }
+
+    });
+
+},{
+    threshold:.12
+});
+
+revealItems.forEach(item=>{
+
+    revealObserver.observe(item);
+
+});
+});
+/* ==========================
+   BACK TO TOP
+========================== */
+
+const topBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+        topBtn.classList.add("show");
+    } else {
+        topBtn.classList.remove("show");
+    }
+});
+
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+/* ==========================
+   STICKY NAVBAR
+========================== */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+/* ==========================
+   LOADER
+========================== */
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 500);
+});
+const contactLeaderBtn = document.getElementById("contactLeaderBtn");
+const leaderModal = document.getElementById("leaderModal");
+const closeModal = document.querySelector(".close-modal");
+
+contactLeaderBtn.addEventListener("click", () => {
+    leaderModal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", () => {
+    leaderModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === leaderModal) {
+        leaderModal.style.display = "none";
+    }
 });
