@@ -451,11 +451,7 @@ window.addEventListener("load", () => {
 const contactLeaderBtn = document.getElementById("contactLeaderBtn");
 const leaderModal = document.getElementById("leaderModal");
 const closeModal = document.querySelector(".close-modal");
-document.querySelector('a[href="#contactLeader"]').addEventListener("click", (e) => {
-    e.preventDefault();
-    leaderModal.style.display = "flex";
-    menu.classList.remove("show");
-});
+
 
 contactLeaderBtn.addEventListener("click", () => {
     leaderModal.style.display = "flex";
@@ -468,5 +464,68 @@ closeModal.addEventListener("click", () => {
 window.addEventListener("click", (e) => {
     if (e.target === leaderModal) {
         leaderModal.style.display = "none";
+    }
+});
+/* ===== V5 UPGRADE : COPY MIGO ID ===== */
+
+document.querySelectorAll(".copy-migo-id").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const id = item.dataset.copy;
+
+        navigator.clipboard.writeText(id);
+
+        let toast = document.querySelector(".copy-toast");
+
+        if (!toast) {
+
+            toast = document.createElement("div");
+
+            toast.className = "copy-toast";
+
+            document.body.appendChild(toast);
+
+        }
+
+        toast.textContent = "✅ Copied: " + id;
+
+        toast.classList.add("show");
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 1800);
+
+    });
+
+});
+/* ===== V5 AUTO DETECT MIGO ID ===== */
+
+document.querySelectorAll(".leader-info p").forEach(p => {
+
+    if (p.textContent.includes("Migo ID:")) {
+
+        const id = p.textContent.replace("Migo ID:", "").trim();
+
+        p.innerHTML =
+        `<strong>Migo ID:</strong>
+        <span class="copy-migo-id" data-copy="${id}">
+        🆔 ${id} 📋
+        </span>`;
+
+    }
+
+});
+
+window.addEventListener("load", () => {
+    const floatingContact = document.getElementById("floatingContact");
+
+    if (floatingContact) {
+        floatingContact.addEventListener("click", (e) => {
+            e.preventDefault();
+            leaderModal.style.display = "flex";
+        });
     }
 });
