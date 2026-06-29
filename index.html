@@ -1,139 +1,390 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Migo Radio Bangladesh</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#09071d;
-color:white;
-text-align:center;
-}
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-.hero img{
-width:100%;
-max-width:900px;
-display:block;
-margin:auto;
-}
+<title>Migo Content Team</title>
 
-.container{
-padding:25px;
-}
+<link rel="stylesheet" href="style.css">
 
-h1{
-font-size:34px;
-color:#FFD43B;
-margin-bottom:10px;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-p{
-font-size:18px;
-line-height:1.7;
-color:#ddd;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.box{
-background:#15122d;
-padding:20px;
-margin:20px auto;
-max-width:700px;
-border-radius:20px;
-}
-
-ul{
-list-style:none;
-padding:0;
-}
-
-li{
-padding:10px;
-font-size:18px;
-}
-
-.button{
-display:inline-block;
-margin-top:25px;
-padding:18px 45px;
-background:#7B2DFF;
-color:white;
-text-decoration:none;
-font-size:22px;
-font-weight:bold;
-border-radius:50px;
-transition:.3s;
-}
-
-.button:hover{
-background:#5d15da;
-}
-
-footer{
-padding:30px;
-color:#999;
-font-size:14px;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="hero">
+<!-- ===========================
+HEADER
+=========================== -->
 
-<img src="banner.png">
-
-</div>
+<header class="header">
 
 <div class="container">
 
-<h1>একাকীত্ব দূর করুন ❤️</h1>
+<div class="logo-box">
 
-<p>
-বাংলাদেশের হাজারো মানুষের সাথে
-লাইভ অডিও চ্যাট, ভিডিও চ্যাট,
-গান, আড্ডা এবং নতুন বন্ধু তৈরি করুন।
-</p>
+<img src="logo.png"
+id="logo"
+alt="Logo">
 
-<div class="box">
+<div>
 
-<h2>আপনি যা পাবেন</h2>
+<h2 id="websiteName"></h2>
 
-<ul>
-<li>🎤 Live Audio Room</li>
-<li>📹 Live Video Chat</li>
-<li>💜 নতুন বন্ধু</li>
-<li>🎮 Games</li>
-<li>🎵 Music</li>
-<li>🌍 Community</li>
-</ul>
+<p id="websiteCountry"></p>
 
 </div>
 
-<a class="button"
-href="https://front.bslive.top/mbapp/inviteReward/share/179501">
+</div>
 
-🚀 এখনই Migo Live-এ যোগ দিন
+<nav id="menu">
+
+<a href="#whyMigo">Why Migo</a>
+
+<a href="#host">Become Host</a>
+
+<a href="#tutorial">Tutorial</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="#download">Download</a>
+
+</nav>
+
+<div class="menu-btn"
+
+id="menuBtn">
+
+☰
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+HERO
+=========================== -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-left">
+
+<div class="badge"
+
+id="heroBadge">
+
+</div>
+
+<h1 id="heroTitle"></h1>
+
+<p id="heroDescription"></p>
+
+<div class="hero-tags"
+
+id="heroTags">
+
+</div>
+
+<div class="hero-buttons">
+
+<a
+
+id="downloadHeroBtn"
+
+class="btn primary">
+
+Download
 
 </a>
 
-<p style="margin-top:30px;font-size:14px;color:#999">
+<a
 
-এই পেজটি শুধুমাত্র Migo Live প্রচারের জন্য তৈরি করা হয়েছে।
+id="tutorialHeroBtn"
 
-</p>
+class="btn secondary">
+
+Tutorial
+
+</a>
 
 </div>
 
-<footer>
+</div>
 
-© 2026 Migo Radio Bangladesh
+<div class="hero-right">
+
+<img
+
+src="hero-banner.webp"
+
+alt="Hero"
+
+class="hero-image">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+WHY MIGO
+=========================== -->
+
+<section
+
+id="whyMigo"
+
+class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 id="whyTitle"></h2>
+
+<p id="whySubtitle"></p>
+
+</div>
+
+<div
+
+class="cards-grid"
+
+id="whyCards">
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+BECOME HOST
+=========================== -->
+
+<section id="host" class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 id="hostTitle"></h2>
+
+<p id="hostSubtitle"></p>
+
+</div>
+
+<div
+class="cards-grid two-column"
+id="hostCards">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+HOST BENEFITS
+=========================== -->
+
+<section
+id="benefits"
+class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 id="benefitsTitle"></h2>
+
+<p id="benefitsSubtitle"></p>
+
+</div>
+
+<div
+class="cards-grid two-column"
+id="benefitsCards">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TUTORIAL
+=========================== -->
+
+<section
+id="tutorial"
+class="section">
+
+<div class="container tutorial-layout">
+
+<div class="tutorial-left">
+
+<h2 id="tutorialTitle"></h2>
+
+<p id="tutorialSubtitle"></p>
+
+<ul
+id="tutorialSteps">
+
+</ul>
+
+<a
+id="tutorialBtn"
+class="btn primary">
+
+Watch Tutorial
+
+</a>
+
+</div>
+
+<div class="tutorial-right">
+
+<iframe
+
+id="tutorialVideo"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FAQ + NEED HELP
+=========================== -->
+
+<section
+id="faq"
+class="section">
+
+<div class="container faq-layout">
+
+<div class="faq-left">
+
+<h2 id="faqTitle"></h2>
+
+<p id="faqSubtitle"></p>
+
+<div
+id="faqContainer">
+
+</div>
+
+</div>
+
+<div class="help-right">
+
+<h2 id="helpTitle"></h2>
+
+<p id="helpDescription"></p>
+
+<div class="help-buttons">
+
+<a
+id="whatsappBtn"
+class="btn primary">
+
+WhatsApp
+
+</a>
+
+<a
+id="facebookBtn"
+class="btn secondary">
+
+Facebook
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+DOWNLOAD
+=========================== -->
+
+<section id="download" class="section">
+
+<div class="container">
+
+<div class="download-box">
+
+<h2 id="downloadTitle"></h2>
+
+<p id="downloadDescription"></p>
+
+<a
+id="downloadBtn"
+class="btn primary">
+
+Download Migo
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer class="footer">
+
+<div class="container footer-content">
+
+<img
+src="logo.png"
+id="footerLogo"
+alt="Logo">
+
+<div>
+
+<h3 id="footerCompany"></h3>
+
+<p id="footerCopyright"></p>
+
+<small id="footerMadeWith"></small>
+
+</div>
+
+</div>
 
 </footer>
 
+<script src="config.js"></script>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

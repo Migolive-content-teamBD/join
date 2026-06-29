@@ -1,0 +1,1518 @@
+/* ==========================================================
+   MIGO WEBSITE V4
+   Mobile First Design
+========================================================== */
+
+/* ==========================================================
+   ROOT
+========================================================== */
+
+:root{
+
+--primary:#6C63FF;
+--primary-dark:#5A52E8;
+
+--secondary:#4E9EFF;
+
+--background:#0B1022;
+--surface:#151A2F;
+--surface-light:#1E2745;
+
+--text:#FFFFFF;
+--text-light:#BFC5DD;
+
+--success:#22C55E;
+--danger:#EF4444;
+
+--radius:20px;
+
+--shadow:
+0 12px 35px rgba(0,0,0,.30);
+
+--transition:.30s ease;
+
+--container:1200px;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:var(--background);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+}
+
+img{
+
+display:block;
+
+max-width:100%;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+button{
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+font-family:inherit;
+
+}
+
+/* ==========================================================
+   COMMON
+========================================================== */
+
+.container{
+
+width:min(92%,var(--container));
+
+margin:auto;
+
+}
+
+.section{
+
+padding:75px 0;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:45px;
+
+}
+
+.section-title h2{
+
+font-size:30px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.section-title p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+height:52px;
+
+padding:0 28px;
+
+border-radius:999px;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:var(--transition);
+
+}
+
+.btn.primary{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+.btn.primary:hover{
+
+background:var(--primary-dark);
+
+transform:translateY(-3px);
+
+}
+
+.btn.secondary{
+
+border:1px solid rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.06);
+
+color:#fff;
+
+}
+
+.btn.secondary:hover{
+
+background:rgba(255,255,255,.12);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+background:rgba(11,16,34,.82);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.header .container{
+
+height:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+.logo-box{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+#logo{
+
+width:48px;
+
+height:48px;
+
+border-radius:14px;
+
+}
+
+.logo-box h2{
+
+font-size:18px;
+
+font-weight:700;
+
+line-height:1.2;
+
+}
+
+.logo-box p{
+
+font-size:13px;
+
+color:var(--text-light);
+
+}
+
+#menu{
+
+display:none;
+
+}
+
+.menu-btn{
+
+width:46px;
+
+height:46px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+background:var(--surface);
+
+border-radius:12px;
+
+cursor:pointer;
+
+}
+
+.menu-btn:hover{
+
+background:var(--primary);
+
+}
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+position:relative;
+min-height:auto;
+
+display:flex;
+
+align-items:center;
+
+padding-top:90px;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+180deg,
+rgba(11,16,34,.25),
+rgba(11,16,34,.88)
+);
+
+z-index:1;
+
+}
+
+.hero-grid{
+
+position:relative;
+
+z-index:2;
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+align-items:center;
+
+}
+
+.hero-left{
+
+text-align:center;
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:center;
+margin-top: 20px;
+
+}
+
+.hero-image{
+
+width:100%;
+
+max-width:420px;
+
+border-radius:28px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.badge{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:8px 18px;
+
+border-radius:999px;
+
+background:rgba(108,99,255,.18);
+
+border:1px solid rgba(108,99,255,.35);
+
+font-size:13px;
+
+margin-bottom:18px;
+
+}
+
+#heroTitle{
+
+font-size:40px;
+
+font-weight:800;
+
+line-height:1.15;
+
+margin-bottom:18px;
+
+white-space:pre-line;
+
+}
+
+#heroDescription{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+max-width:620px;
+
+margin:0 auto 25px;
+
+}
+
+.hero-tags{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:28px;
+
+}
+
+.hero-tags span{
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.08);
+
+font-size:13px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:14px;
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(min-width:768px){
+
+#heroTitle{
+
+font-size:56px;
+
+}
+
+.hero-image{
+
+max-width:500px;
+
+}
+
+}
+
+/* ==========================================================
+   DESKTOP
+========================================================== */
+
+@media(min-width:1024px){
+
+.hero-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.hero-left{
+
+text-align:left;
+
+}
+
+#heroDescription{
+
+margin-left:0;
+
+}
+
+.hero-tags{
+
+justify-content:flex-start;
+
+}
+
+.hero-buttons{
+
+justify-content:flex-start;
+
+}
+
+.hero-image{
+
+max-width:560px;
+
+}
+
+}
+/* ==========================================================
+   WHY MIGO
+========================================================== */
+
+#whyMigo{
+
+background:#10162C;
+
+}
+
+.cards-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:16px;
+
+}
+
+.cards-grid .card{
+
+background:var(--surface);
+
+border-radius:20px;
+
+padding:20px 16px;
+
+text-align:center;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow);
+
+}
+
+.cards-grid .card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.cards-grid .icon{
+
+width:60px;
+
+height:60px;
+
+margin:auto;
+
+margin-bottom:16px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+}
+
+.cards-grid h3{
+
+font-size:17px;
+
+margin-bottom:8px;
+
+}
+
+.cards-grid p{
+
+font-size:13px;
+
+line-height:1.7;
+
+color:var(--text-light);
+
+}
+
+/* ==========================================================
+   BECOME HOST
+========================================================== */
+
+#host{
+
+background:var(--background);
+
+}
+
+.two-column{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.two-column .card{
+
+background:var(--surface);
+
+padding:22px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow);
+
+}
+
+.two-column .card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.two-column .icon{
+
+width:58px;
+
+height:58px;
+
+margin:auto;
+
+margin-bottom:14px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+}
+
+.two-column h3{
+
+font-size:18px;
+
+margin-bottom:8px;
+
+}
+
+.two-column p{
+
+font-size:13px;
+
+line-height:1.7;
+
+color:var(--text-light);
+
+}
+
+/* ==========================================================
+   HOST BENEFITS
+========================================================== */
+
+#benefits{
+
+background:#10162C;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:767px){
+
+.cards-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+}
+
+.cards-grid .card{
+
+padding:16px 10px;
+
+}
+
+.cards-grid .icon{
+
+width:46px;
+
+height:46px;
+
+font-size:22px;
+
+margin-bottom:10px;
+
+}
+
+.cards-grid h3{
+
+font-size:13px;
+
+}
+
+.cards-grid p{
+
+display:none;
+
+}
+
+.two-column{
+
+gap:12px;
+
+}
+
+.two-column .card{
+
+padding:18px 12px;
+
+}
+
+.two-column .icon{
+
+width:46px;
+
+height:46px;
+
+font-size:22px;
+
+margin-bottom:10px;
+
+}
+
+.two-column h3{
+
+font-size:14px;
+
+}
+
+.two-column p{
+
+display:none;
+
+}
+
+}
+/* ==========================================================
+   TUTORIAL
+========================================================== */
+
+#tutorial{
+
+background:var(--background);
+
+}
+
+.tutorial-layout{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+align-items:center;
+
+}
+
+.tutorial-left h2{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+.tutorial-left p{
+
+color:var(--text-light);
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+#tutorialSteps{
+
+list-style:none;
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+margin-bottom:30px;
+
+}
+
+#tutorialSteps li{
+
+background:var(--surface);
+
+padding:15px 18px;
+
+border-radius:14px;
+
+font-size:15px;
+
+}
+
+.tutorial-right iframe{
+
+width:100%;
+
+aspect-ratio:16/9;
+
+border:none;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+/* ==========================================================
+   FAQ + HELP
+========================================================== */
+
+#faq{
+
+background:#10162C;
+
+}
+
+.faq-layout{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:22px;
+
+align-items:start;
+
+}
+
+#faqContainer{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.faq-item{
+
+background:var(--surface);
+
+border-radius:16px;
+
+overflow:hidden;
+
+}
+
+.faq-question{
+
+padding:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.faq-answer{
+
+display:none;
+
+padding:0 18px 18px;
+
+font-size:14px;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+.faq-item.active .faq-answer{
+
+display:block;
+
+}
+
+/* ==========================================================
+   HELP CARD
+========================================================== */
+
+.help-right{
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+padding:25px;
+
+border-radius:20px;
+
+position:sticky;
+
+top:90px;
+
+}
+
+.help-right h2{
+
+margin-bottom:12px;
+
+}
+
+.help-right p{
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+.help-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:767px){
+
+.faq-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.help-right{
+
+position:static;
+
+}
+
+.tutorial-layout{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   DOWNLOAD
+========================================================== */
+
+#download{
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+padding:80px 0;
+
+}
+
+.download-box{
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.download-box h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.download-box p{
+
+font-size:16px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+color:#fff;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+background:#080C18;
+
+padding:35px 20px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.footer-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:18px;
+
+text-align:left;
+
+}
+
+#footerLogo{
+
+width:45px;
+
+height:45px;
+
+border-radius:12px;
+
+}
+
+.footer h3{
+
+font-size:18px;
+
+margin-bottom:6px;
+
+}
+
+.footer p{
+
+font-size:13px;
+
+color:var(--text-light);
+
+margin-bottom:4px;
+
+}
+
+.footer small{
+
+font-size:12px;
+
+color:rgba(255,255,255,.55);
+
+}
+
+/* ==========================================================
+   DESKTOP MENU
+========================================================== */
+
+@media(min-width:992px){
+
+#menu{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
+}
+
+#menu a{
+
+font-size:15px;
+
+font-weight:500;
+
+transition:var(--transition);
+
+}
+
+#menu a:hover{
+
+color:var(--secondary);
+
+}
+
+.menu-btn{
+
+display:none;
+
+}
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+.card,
+.download-box,
+.help-right,
+.hero-image{
+
+transition:all .35s ease;
+
+}
+
+.card:hover,
+.download-box:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--secondary);
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+/* ==========================================================
+   FINAL MOBILE POLISH
+========================================================== */
+
+/* Hero */
+#heroTitle{
+    font-size:42px;
+    line-height:1.15;
+}
+
+.hero-image{
+    max-width:520px;
+    margin:auto;
+}
+
+.hero-tags span{
+    font-size:12px;
+    padding:8px 14px;
+}
+
+/* Why Migo */
+#whyMigo .cards-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+#whyMigo .card{
+    padding:14px 8px;
+    min-height:125px;
+}
+
+#whyMigo .icon{
+    width:44px;
+    height:44px;
+    font-size:20px;
+}
+
+#whyMigo h3{
+    font-size:13px;
+}
+
+#whyMigo p{
+    display:none;
+}
+
+/* Become Host */
+#host .two-column{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+#host .card{
+    min-height:150px;
+    padding:18px 10px;
+}
+
+#host .icon{
+    width:46px;
+    height:46px;
+    font-size:22px;
+}
+
+/* Host Benefits */
+#benefits .two-column{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+#benefits .card{
+    min-height:150px;
+    padding:18px 10px;
+}
+
+#benefits .icon{
+    width:46px;
+    height:46px;
+    font-size:22px;
+}
+
+/* Tutorial */
+.tutorial-layout{
+    gap:18px;
+}
+
+#tutorialSteps li{
+    padding:12px 14px;
+    font-size:14px;
+}
+
+/* FAQ + Help */
+.faq-layout{
+    gap:18px;
+}
+
+.help-right{
+    padding:20px;
+}
+
+.help-buttons .btn{
+    width:100%;
+}
+
+/* Download */
+.download-box{
+    padding:0 10px;
+}
+
+.download-box h2{
+    font-size:30px;
+}
+
+.download-box p{
+    font-size:14px;
+}
+
+/* Footer */
+.footer{
+    padding:20px 15px;
+}
+
+.footer-content{
+    gap:12px;
+}
+
+#footerLogo{
+    width:36px;
+    height:36px;
+}
+
+.footer h3{
+    font-size:15px;
+}
+
+.footer p,
+.footer small{
+    font-size:11px;
+}
+
+/* Desktop */
+@media(min-width:768px){
+
+#whyMigo .cards-grid{
+    grid-template-columns:repeat(6,1fr);
+}
+
+#host .two-column,
+#benefits .two-column{
+    grid-template-columns:repeat(4,1fr);
+}
+
+#heroTitle{
+    font-size:58px;
+}
+
+}
+/* ==========================
+   MOBILE MENU
+========================== */
+
+#menu{
+
+display:none;
+
+flex-direction:column;
+
+position:absolute;
+
+top:72px;
+
+left:0;
+
+width:100%;
+
+background:#151A2F;
+
+padding:20px;
+
+gap:18px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+#menu.show{
+
+display:flex;
+
+}
+
+#menu a{
+
+font-size:16px;
+
+font-weight:600;
+
+color:#fff;
+
+}
+
+@media(min-width:992px){
+
+#menu{
+
+display:flex !important;
+
+position:static;
+
+flex-direction:row;
+
+background:none;
+
+padding:0;
+
+width:auto;
+
+}
+
+}
+/* ==========================
+   HERO CLEAN VERSION
+========================== */
+
+/* Hero Title ও Description লুকিয়ে রাখবে */
+#heroTitle,
+#heroDescription{
+    display:none;
+}
+
+/* Badge-এর নিচে Banner উপরে উঠে আসবে */
+.hero-content{
+    gap:16px;
+}
+
+/* Banner একটু উপরে আনবে */
+.hero-image{
+    margin-top:0;
+}
+
+/* Buttons-এর উপরে Gap একটু কমাবে */
+.hero-buttons{
+    margin-top:20px;
+}
+/* Hide Hero Badge */
+
+#heroBadge{
+    display:none;
+}
+.hero-grid{
+    display:flex;
+    flex-direction:column;
+    gap: 16px;
+}
+
+.hero-left{
+    display:flex;
+    flex-direction:column;
+}
+
+.hero-right{
+    order:1;
+    margin-top: 0;
+}
+
+.hero-tags{
+    order:2;
+}
+
+.hero-buttons{
+    order:3;
+}
+.hero-tags{
+    display: none !important;
+}
